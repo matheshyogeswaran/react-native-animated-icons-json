@@ -1,0 +1,29 @@
+{
+  "name": "react-native-animated-icons-json",
+  "version": "1.0.1",
+  "description": "Animation icons for react native animated animations",
+  "main": "index.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheshyogeswaran/react-native-animated-icons.git"
+  },
+  "keywords": [
+    "React",
+    "Native",
+    "Animated",
+    "Icons",
+    "Motion",
+    "Graphics",
+    "Visuals"
+ 
+  ],
+  "author": "Mathesh Y",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matheshyogeswaran/react-native-animated-icons-json/issues"
+  },
+  "homepage": "https://github.com/matheshyogeswaran/react-native-animated-icons-json#readme"
+}
