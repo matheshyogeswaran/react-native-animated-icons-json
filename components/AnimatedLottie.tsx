@@ -12,7 +12,6 @@ const AnimatedLottie: React.FC<AnimatedLottieProps> = ({ animationName, width, h
     const [jsonData, setJsonData] = useState<any | null>(null);
 
     useEffect(() => {
-        console.log('Fetching JSON data...');
         const fetchJson = async () => {
             try {
                 const response = await fetch(`https://servertry-2or3.onrender.com/get-animation/${animationName}`);
