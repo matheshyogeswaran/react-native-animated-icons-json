@@ -28,29 +28,32 @@ const AnimatedLottie: React.FC<AnimatedLottieProps> = ({ animationName, width, h
         fetchJson();
     }, [animationName]);
 
-    if (!jsonData) {
+    // if (!jsonData) {
+    //     return (
+    //         <SafeAreaView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    //             <Text>Loading...</Text>
+    //         </SafeAreaView>
+    //     );
+    // }
+
+    if(jsonData) {
         return (
-            <SafeAreaView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <Text>Loading...</Text>
+            <SafeAreaView style={{ flex: 1 }}>
+                <View style={{ flex: 1 }}>
+                    <LottieView
+                        source={jsonData}
+                        autoPlay
+                        loop
+                        style={{ width: width, height: height }}
+                    />
+                </View>
+                <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
+               
+                </View>
             </SafeAreaView>
         );
     }
-
-    return (
-        <SafeAreaView style={{ flex: 1 }}>
-            <View style={{ flex: 1 }}>
-                <LottieView
-                    source={jsonData}
-                    autoPlay
-                    loop
-                    style={{ width: width, height: height }}
-                />
-            </View>
-            <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
-                {/* Additional content can be added here */}
-            </View>
-        </SafeAreaView>
-    );
+    };
 };
 
 export default AnimatedLottie;
