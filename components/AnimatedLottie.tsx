@@ -15,7 +15,7 @@ const AnimatedLottie: React.FC<AnimatedLottieProps> = ({ animationName, width, h
         console.log('Fetching JSON data...');
         const fetchJson = async () => {
             try {
-                const response = await fetch(`https://servertry-2or3.onrender.com/animations/${animationName}.json`);
+                const response = await fetch(`https://servertry-2or3.onrender.com/get-animation/${animationName}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch JSON');
                 }
