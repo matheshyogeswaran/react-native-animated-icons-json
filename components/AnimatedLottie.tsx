@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { SafeAreaView, View, Text } from 'react-native';
+import { SafeAreaView, View, ActivityIndicator } from 'react-native';
 import LottieView from 'lottie-react-native';
 
 interface AnimatedLottieProps {
@@ -28,15 +28,15 @@ const AnimatedLottie: React.FC<AnimatedLottieProps> = ({ animationName, width, h
         fetchJson();
     }, [animationName]);
 
-    // if (!jsonData) {
-    //     return (
-    //         <SafeAreaView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    //             <Text>Loading...</Text>
-    //         </SafeAreaView>
-    //     );
-    // }
+    if (!jsonData) {
+        return (
+            <SafeAreaView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                <ActivityIndicator size="large" color="#0000ff" />
+            </SafeAreaView>
+        );
+    }
 
-    if(jsonData) {
+    if (jsonData) {
         return (
             <SafeAreaView style={{ flex: 1 }}>
                 <View style={{ flex: 1 }}>
@@ -48,7 +48,7 @@ const AnimatedLottie: React.FC<AnimatedLottieProps> = ({ animationName, width, h
                     />
                 </View>
                 <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
-               
+
                 </View>
             </SafeAreaView>
         );
