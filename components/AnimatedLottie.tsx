@@ -53,7 +53,6 @@ const AnimatedLottie: React.FC<AnimatedLottieProps> = ({ animationName, width, h
             </SafeAreaView>
         );
     }
-    };
 };
 
 export default AnimatedLottie;

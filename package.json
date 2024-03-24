@@ -1,6 +1,6 @@
 {
   "name": "react-native-animated-icons-json",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Animation icons for react native animated animations",
   "main": "index.tsx",
   "scripts": {
